@@ -1,4 +1,6 @@
-export const createMatrix = (rows, cols) => {
+import { render } from "./render.js"
+
+export const createBoard = (rows, cols) => {
   const matrix = []
 
   for (let row = 0; row < rows; row++) {
@@ -12,7 +14,7 @@ export const createMatrix = (rows, cols) => {
     matrix.push(arrayOfCells)
   }
 
-  console.log({ rows: matrix.length, cols: matrix[0].length })
+  render(matrix)
 
   return matrix
 }

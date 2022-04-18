@@ -1,5 +1,9 @@
-import { createMatrix } from "./createMatrix.js";
-import { render } from "./render.js";
+import { createBoard } from "./createBoard.js";
+import { evolveToNextGeneration } from "./evolveToNextGeneration.js";
 
-const matrix = createMatrix(8, 8)
-render(matrix)
+let actualGeneration = createBoard(8, 8)
+
+let nextGeneration = evolveToNextGeneration(actualGeneration)
+evolveToNextGeneration(nextGeneration)
+
+
