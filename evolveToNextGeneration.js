@@ -1,11 +1,8 @@
-import { render } from "./render.js"
-
 export const evolveToNextGeneration = (actualGeneration) => {
   const numberOfRows = actualGeneration.length
   const numberOfCols = actualGeneration[0].length
 
   const nextGeneration = []
-
 
   for (let row = 0; row < numberOfRows; row++) {
     const newRow = []
@@ -87,8 +84,6 @@ export const evolveToNextGeneration = (actualGeneration) => {
 
     nextGeneration.push(newRow)
   }
-
-  render(nextGeneration)
 
   return nextGeneration
 }
